@@ -34,3 +34,28 @@ function mergeTwoLists( $list1, $list2 ) {
 
     return $dummy->next;
 }
+
+// 704 binary search
+function search( $nums, $target ) {
+    $left = 0;
+    $right = count( $nums ) - 1;
+
+    while( $left <= $right ) {
+        $mid = (int)( ( $left + $right ) / 2 );
+
+        // Check if the target is present at mid
+        // If it is, return the index
+        if( $nums[$mid] == $target ) {
+            return $mid;
+        }
+        // If the target is greater, ignore the left half
+        // If the target is smaller, ignore the right half
+        if( $nums[$mid] < $target ) {
+            $left = $mid + 1;
+        } else {
+            $right = $mid - 1;
+        }
+    }
+
+    return -1;
+}
