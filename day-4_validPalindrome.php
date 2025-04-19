@@ -13,7 +13,7 @@ function isPalindrome( $s ) {
     while( $start < $end ) {
         if( $n[$start] == $n[$end] ) {
             $start++;
-            $end--;   
+            $end--;
         }else{
             return false;
         }
