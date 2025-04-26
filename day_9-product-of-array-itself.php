@@ -10,6 +10,10 @@
  * 2. Calculate the left product for each index and store it in result.
  * 3. Calculate the right product for each index and multiply it with the corresponding value in result.
  * 4. Return the result array.
+ * 
+ * Real life usecase example:
+ * - In a manufacturing process, you want to calculate the contribution of each machine to the total output.
+ * - This can help in identifying the impact of each machine on the overall production.
  */
 function productExceptSelf($nums) {
     $n = count($nums);
