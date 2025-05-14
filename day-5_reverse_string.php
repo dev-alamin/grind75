@@ -24,3 +24,8 @@ function reverseString(&$s) {
     }
     
 }
+
+// Example usage
+$s = ["h","e","l","l","o"];
+reverseString( $s );
+print_r( $s );
