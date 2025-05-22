@@ -1,4 +1,5 @@
 <?php
+// 20. Valid Parenthesis
 /**
  * This function checks if a given string of parentheses is valid.
  * It uses a stack to keep track of the opening parentheses and
