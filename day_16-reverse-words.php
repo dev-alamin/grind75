@@ -34,6 +34,9 @@ function reverseWords( $s ) {
     }
 
     // If any remaining, at the end
+    // Because the last word may not be followed by a space
+    // So we need to check if $word is not empty
+    // and add it to the sentence array
     if( $word !== '' ) {
         $sentence[] = $word;
     }
@@ -41,7 +44,8 @@ function reverseWords( $s ) {
     $revWords = '';
     for( $i = count( $sentence ) - 1; $i >= 0; $i-- ) {
         $revWords .= $sentence[$i];
-
+        
+        // Add a space between words, but not after the last word
         if( $i > 0 ) {
             $revWords .= ' ';
         }
