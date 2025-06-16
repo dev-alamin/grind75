@@ -27,12 +27,21 @@ function productExceptSelf($nums) {
         $result[$i] = $left;
         $left *= $nums[$i];
     }
+    // Now the result array like : [1, 1, 2, 6] for nums = [1, 2, 3, 4]
     
     // Step 2: Compute the right product and update the result array
     for ($i = $n - 1; $i >= 0; $i--) {
         $result[$i] *= $right;
         $right *= $nums[$i];
     }
+    // Now the result array like : [24, 12, 8, 6] for nums = [1, 2, 3, 4]
+    // The final result is the product of all elements except the current one
+    // Example: For nums = [1, 2, 3, 4], the result will be [24, 12, 8, 6]
     
     return $result;
 }
+
+// Example usage:
+$nums = [1, 2, 3, 4];
+$result = productExceptSelf($nums);
+print_r($result); // Output: [24, 12, 8, 6]
