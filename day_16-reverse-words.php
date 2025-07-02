@@ -55,4 +55,4 @@ function reverseWords( $s ) {
 }
 
 $s = "  hello    world    ";
-print_r( reverseWords( $s ) );
+print_r( reverseWords( $s ) ); // Output: "world hello"

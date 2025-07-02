@@ -1,5 +1,6 @@
 <?php
 // 75. Sort Colors
+// Topic: Array, Two Pointers, Level: Medium
 /**
  * Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent,
  * with the colors in the order red, white, and blue.
@@ -63,4 +64,4 @@ function sortColors(&$nums) {
 
 $nums = [1,2,0,1,2,2,0];
 sortColors( $nums );
-print_r( $nums );
+print_r( $nums ); // Output: [0,0,1,1,2,2,2]

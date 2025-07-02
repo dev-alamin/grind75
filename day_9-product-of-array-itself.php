@@ -24,14 +24,16 @@ function productExceptSelf($nums) {
 
     // Step 1: Compute the left product for each element
     for ($i = 0; $i < $n; $i++ ) {
-        $result[$i] = $left;
+        $result[$i] = $left; // Store the left product in result
+        // We didn't multiply by nums[$i] yet, so result[i] is just the product of all elements to the left of i
         $left *= $nums[$i];
     }
     // Now the result array like : [1, 1, 2, 6] for nums = [1, 2, 3, 4]
     
     // Step 2: Compute the right product and update the result array
     for ($i = $n - 1; $i >= 0; $i--) {
-        $result[$i] *= $right;
+        $result[$i] *= $right; // Multiply the current result with the right product
+        // We multiply by right because we want the product of all elements to the right of i
         $right *= $nums[$i];
     }
     // Now the result array like : [24, 12, 8, 6] for nums = [1, 2, 3, 4]

@@ -1,5 +1,6 @@
 <?php
 // 8. String to Integer (atoi)
+// Topic: String Manipulation, Level: Medium
 // Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
 // The algorithm for converting a string to an integer is as follows:
 // 1. Read in and ignore any leading whitespace.

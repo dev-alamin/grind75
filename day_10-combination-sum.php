@@ -59,5 +59,5 @@ $candidates = [2, 3, 6, 7];
 $target = 7;
 $result = combinationSum($candidates, $target);
 echo '<pre>';
-print_r($result);
+print_r($result); // Output: [[2, 2, 3], [7]]
 echo '</pre>';

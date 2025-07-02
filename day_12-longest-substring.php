@@ -17,17 +17,20 @@ function lengthOfLongestSubstring($s) {
     for( $end = 0; $end < strlen( $s ); $end++ ) {
         $char = $s[$end];
 
-        // If the character is already seen and is within the current window
-        // Update the start index to the next position after the last occurrence
-        // This ensures that we only keep unique characters in the current window
-        // The condition $seen[$char] >= $start ensures that we only update start
-        // if the last occurrence of the character is within the current window
-        // This is important to avoid moving the start index backward
-        // which would break the uniqueness of characters in the current window
-        // This is a common technique to maintain a sliding window of unique characters
-        // The $seen array keeps track of the last index where each character was seen
-        // This allows us to efficiently update the start index when we encounter a duplicate character
-        // The $start index is updated to the next position after the last occurrence of the character
+        /**
+        * If the character is already seen and is within the current window
+        * ---Update the start index to the next position after the last occurrence
+        * ---This ensures that we only keep unique characters in the current window
+        * The condition $seen[$char] >= $start ensures that we only update start
+        * ---if the last occurrence of the character is within the current window
+        * ---This is important to avoid moving the start index backward
+        * ---which would break the uniqueness of characters in the current window
+        *
+        * This is a common technique to maintain a sliding window of unique characters
+        * The $seen array keeps track of the last index where each character was seen
+        * This allows us to efficiently update the start index when we encounter a duplicate character
+        * The $start index is updated to the next position after the last occurrence of the character
+        */
         if( isset( $seen[$char] ) && $seen[$char] >= $start ) {
             $start = $seen[$char] + 1;
         }
