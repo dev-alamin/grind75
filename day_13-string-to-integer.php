@@ -39,9 +39,11 @@ function myAtoi($s) {
     // Convert digits to integer
     while ($i < $n && ctype_digit($s[$i])) {
         $digit = ord($s[$i]) - ord('0');
+
         if ($result > ($INT_MAX - $digit) / 10) {
             return ($sign == 1) ? $INT_MAX : $INT_MIN;
         }
+        
         $result = $result * 10 + $digit;
         $i++;
     }
